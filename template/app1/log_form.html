@@ -1,0 +1,49 @@
+{% extends 'app1/dummy.html' %}
+{% block title %}
+<title>LOGIN</title>
+{% endblock %}
+
+{% block body_block %}
+<style>
+    .login
+    {
+        background: url('../static/images/bc.jpg') ;
+            background-size: cover;
+    }
+    #h,#button
+    {
+        background: url('../static/images/bc4.jpg') ;
+            background-size: cover;
+            color: white;
+            border-color: grey;
+            padding: 5px 15px;
+            
+    }
+</style>
+
+<center>
+    <div class="login">
+        <a href="{% url 'home' %}">X</a>
+        <h3 class="bg-success d-block" id="h">LogIn</h3>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <input type="text" name="username"  id="username" placeholder="Enter username">
+            <br>
+            <br>
+            <input type="password" name="password" id="password" placeholder="Enter password">
+            <br>
+            <br>
+            <input type="submit" value="LogIn" id="button">
+        </form>
+        <br>
+        <p style="font-size: large;"><a href="{% url 'register_form' %}">Register</a></p>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li {% if message.tags %} class="{{ message.tags }} bg-danger mt-3"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    </div>
+</center>
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends 'app1/dummy.html' %}
+
+{% block title %}
+<title>Items</title>
+{% endblock %}
+
+{% block body_block %}
+<style>
+    #co
+    { 
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	text-align: center;
+    flex-direction: column;
+    }
+    #color
+    {
+        font-size: larger;
+        height:100vh;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	text-align: center;
+	flex-direction: column;
+    }
+    #color
+{
+	color: yellow;
+    font-size:x-large;
+    
+}
+#color>span
+{
+	color:rgb(244, 245, 246);
+	text-decoration-line: underline ;
+}
+#color>span:hover
+{
+	background-color: black;
+    border-radius: 20px;
+    padding: 0px 20px;
+}
+</style>
+<div>
+    <p id="color"> <span>Indian Dinner Menu:</span>
+        Appetizer. Chicken Tikka Kebab. Khaman. Mint Cilantro Chutney.<br>
+        <span>Drinks:</span> Shikanji Nimbu Pani.<br>
+        <span>Main course:</span> Rajma. Palak Paneer. Chicken Tikka Masala.<br>
+        <span> Rice dish:</span> Jeera Rice.<br>
+        <span> Bread:</span> Naan.<br>
+        <span> Raita:</span> Boondi raita.<br>
+        <span> Dessert:</span> Kheer and/or Gulab Jamun.
+</p>
+<h4 id="co"><a href="{% url 'home' %}">Go Back To Home Page</a></h4>
+</div>
+
+{% endblock %}

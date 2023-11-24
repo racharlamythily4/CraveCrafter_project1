@@ -1,0 +1,61 @@
+{% extends 'app1/dummy.html' %}
+{% block title %}
+<title>Home</title>
+{% endblock %}
+
+{% block body_block %}
+<style>
+    .upload
+    {
+        height: 90%;
+        background-size: cover;
+        background-color: rgb(189, 58, 58,0.1);
+        padding: 18px 40px;
+        border: 2px rgb(23, 23, 23) solid;
+        
+    }
+    .upload>h5
+    {
+        background: url('../static/images/bc.jpg');
+        color: rgb(245, 242, 242);
+        font-style: italic;
+        font-size: large;
+        border: 1px black solid;
+        }
+    .upload>form>.btn
+    {
+        background-color: rgb(8, 8, 8,0.1);
+        border: 1px black solid;
+        color: rgb(253, 251, 251);
+    }
+    .upload>form>.btn:hover
+    {
+        background: url('../static/images/bc.jpg');
+        border: 1px black solid;
+        color: aliceblue;
+    }
+    .upload>form>.in:hover
+    {
+        background-color:black;
+        color:green ;
+    }
+  
+    
+</style>
+<center>
+    <div class="upload">
+        <h5>Upload the Product</h5>
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input class="in" type="text" name="product_type" placeholder="Product Type"><br><br>
+            <input class="in" type="file" name="image" id="" placeholder="Inside Image"><br><br>
+            <input class="in" type="text" name="productname" id="" placeholder="Product Name"><br><br>
+            <input class="in" type="number" name="price" id="" placeholder=" Enter Price"><br><br>
+            <textarea class="in" name="description" id="" cols="30" rows="7" placeholder='Write sample product description'></textarea>
+            <br>
+            <br>
+            <input type="submit" value="Submit" class="btn">
+        </form>
+    </div>
+</center>
+{% endblock %}

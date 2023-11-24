@@ -1,0 +1,25 @@
+body
+        {
+            background: url('../static/images/food2.jpg') ;
+            background-size: cover;
+        }
+.bg
+{
+	background: url('../static/images/food2.jpg') ;
+    background-size: cover;
+}
+.bg>div
+{
+	background: url('../static/images/food2.jpg') ;
+    background-size: cover;
+	height:100vh;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	text-align: center;
+	flex-direction: column;
+}
+
+
+
+

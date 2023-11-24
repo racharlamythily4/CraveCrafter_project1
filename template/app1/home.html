@@ -1,0 +1,58 @@
+{% extends 'app1/dummy.html' %}
+
+{% block title %}
+<title>Home</title>
+{% endblock %}
+
+{% block body_block %}
+<style>
+  .bg
+  {
+    background: url('../static/images/food2.jpg') ;
+    background-size: cover;
+  }
+  #item
+  {
+    background: url('../static/images/bc.jpg') ;
+    background-size: cover;
+    border: 2px black solid;
+    border-radius: 50%;
+    padding: 40px;
+    text-decoration: none;
+  }
+  .bg>div>h1
+{
+	color: rgba(112, 157, 27, 0.7);
+	font-family:"comic sans ms",sans-serif;
+	margin: 0px 0px 20px 0px;
+
+}
+#w
+{
+  color: aliceblue;
+  border: 2px black solid;
+  border-radius: 30% 0 30% 0;
+  background:url('../static/images/bc.jpg');
+  margin: 5px;
+  font-style: italic;
+  font-size:xx-large;
+  padding: 10px;
+  
+}
+
+</style>
+<div class="bg" >
+    <div>
+      
+      {% if user.username %}
+      <h1 id="w">Welcome To<span> <i style="color: antiquewhite;">'CraveCrafter' <i></span><span style="color: aliceblue;" >food center</span> :{{user.username}}</h1>
+			{% else %} 
+      <h1 id="w">Welcome To<span> <i style="color: antiquewhite;">'CraveCrafter' <i></span><span style="color: aliceblue;">food center</span></h1>
+      {% endif %}
+      <h4 id="item"><a href="{% url 'items' %}">Click Here <br>To Get <br>The MENU</a></h4>
+         
+		</div>
+    
+	</div>
+</div>
+{% endblock %}
