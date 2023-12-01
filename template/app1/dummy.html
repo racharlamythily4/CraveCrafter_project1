@@ -21,24 +21,27 @@
     <link rel="stylesheet" href="{% static 'fonts icons/fa/css/all.css' %}">
     <link rel="stylesheet" href="{% static 'fonts icons/fa/css/all.min.css' %}">
 
-
     <style>
-        body
+       
+     body
         {
             background: url('../static/images/food2.jpg') ;
             background-size: cover;
         }
+       
         nav
         {
             background: url('../static/images/bc4.jpg') ;
             background-size: cover;
             border-radius: 15px;
         }
+       
         .profile_data
         {
             background-color: rgb(31, 30, 30,0.1);
         } 
-       .nav_active
+       
+        .nav_active
        {
            position: absolute;
            top: 90px;
@@ -58,6 +61,7 @@
        {
         display: block;
        }
+       
        .nav_active>li>a
        {
            background-color: black;
@@ -65,10 +69,12 @@
            margin: 2px;
            border-radius: 20px;
        }
+       
        .profile_data>li>a
        {
             background: url('../static/images/bc.jpg') ;
        }
+       
        .profile_data>li>a:hover
        {
         text-decoration: none;
@@ -77,6 +83,7 @@
         text-align: center;
         font-style: italic;
        }
+       
        .nav_active>li>a:hover
        {
            background-color:greenyellow;
@@ -84,6 +91,7 @@
            color: rgb(247, 242, 242);
            border-radius: 20px;
        }
+       
        .d-flex>li>a:hover
        {
            background-color:greenyellow;
@@ -91,6 +99,7 @@
            color: rgb(247, 242, 242);
            border-radius: 20px;
        }
+       
        .font
        {
            position: absolute;
@@ -100,6 +109,7 @@
            color: orange;
            display: none;
        }
+       
        @media only screen and (max-width:1261px)
        {
            .ul_nav>li
@@ -176,9 +186,9 @@
             </div>
         </div>
     </nav>
-   
-   
+      
 </head>
+
 <body class="bg-success">
     <ul class="profile_data">
         <li><a href="{% url 'profile_data' %}">View Profile</a></li>
@@ -189,6 +199,7 @@
     </ul>
 
 <script>
+
     let profileDropdownList = document.querySelector(".profile_data");
     let btn = document.querySelector(".profile_btn");
 
@@ -200,20 +211,14 @@
     if (!btn.contains(e.target)) classList.remove("active");
     });
 
-
     function fontes() {
         document.getElementById("mydropdown").classList.toggle("show");
       }
     
 </script>
-
-
     
-    
-
 {% block body_block %}
 {% endblock %}
-
 
 </body>
 </html>

@@ -1,13 +1,3 @@
-body
-        {
-            background: url('../static/images/food2.jpg') ;
-            background-size: cover;
-        }
-.bg
-{
-	background: url('../static/images/food2.jpg') ;
-    background-size: cover;
-}
 .bg>div
 {
 	background: url('../static/images/food2.jpg') ;
@@ -19,7 +9,5 @@ body
 	text-align: center;
 	flex-direction: column;
 }
-
-
 
 

@@ -34,16 +34,18 @@ def register_form(request):
             us=usr.save(commit=False)
             us.set_password(usr.cleaned_data['password'])
             us.save()
-            ''' send_mail('register_form',
+            send_mail('register_form',
                       'Your Register successfully',
-                      'mythilyracharla7@gmail.com',
+                      'racharlamythily4@gmail.com',
                       [us.email],
-                      fail_silently=False)'''
+                      fail_silently=False
+                      )
             return HttpResponseRedirect(reverse('log_form'))
         else:
             messages.success(request, 'username already there')
         
     return render(request,'app1/register_form.html',d)
+
 def log_form(request):
     if request.method=='POST':
         username=request.POST['username']
